@@ -26,31 +26,67 @@ lista_de_listas_de_inteiros = [
     [10, 9, 8, 7, 6, 5, 4, 3, 2, 1],   # -1
 ]
 
-def name_error_wtf():
-    respostas = []
-    for indices in lista_de_listas_de_inteiros:
-        cont = []
-        duiplicados = []
+# def encontra_duplicado():
+#     respostas = []
+#     for indices in lista_de_listas_de_inteiros:
+#         cont = []
+#         duiplicados = []
         
+#         for i in indices:
 
-        for i in indices:
+#             if i not in cont:
+#                 cont.append(i)
 
-            if i not in cont:
-                cont.append(i)
+#                 if len(cont) == 10:
+#                     respostas.append(-1)
 
-                if len(cont) == 10:
-                    respostas.append(-1)
+#             elif i in cont:
+#                 duiplicados.append(i)
+#                 respostas.append(duiplicados[0])
+#                 break
 
-            elif i in cont:
-                duiplicados.append(i)
-                respostas.append(duiplicados[0])
-                break
-
-    
-    return print(respostas)
+#     return print(respostas)
              
-name_error_wtf()  
+# encontra_duplicado()  
     
 
+# Prof
+
+# def encontra_primeiro_duplicado(lista_de_inteiros):
+#     numeros_checados = set()
+#     primeiro_duplicado = -1
+
+#     for numero in lista_de_inteiros:
+#         if numero in numeros_checados:
+#             primeiro_duplicado = numero
+#             break
+
+#         numeros_checados.add(numero)
+
+#     return primeiro_duplicado
+
+
+# for lista in lista_de_listas_de_inteiros:
+#     print(
+#         lista,
+#         encontra_primeiro_duplicado(lista)
+#     )
+
+
+#ChatGPT
+
+def encontra_duplicado(lista):
+    numeros_vistos = set()
+    
+    for numero in lista:
+        if numero in numeros_vistos:
+            return numero
+        numeros_vistos.add(numero)
+    
+    return -1
+
+for lista in lista_de_listas_de_inteiros:
+    resultado = encontra_duplicado(lista)
+    print(f"Lista: {lista} -> Duplicado: {resultado}")
 
 
