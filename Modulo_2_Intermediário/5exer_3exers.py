@@ -20,7 +20,18 @@ produtos = [
 1) Aumente os preços dos produtos a seguir em 10%
    Gere novos_produtos por deep copy (cópia profunda)
 """
+# SE FORMOS PENSAR EM LARGA ESCOLA, ACHO QUE ESSA MANEIRA VAI GASTAR MUITO PODER DE PROCESSAMEMTO
+# novos_precos = [var_temporaria['preco'] for var_temporaria in produtos]
 
-novos_precos = [var_temporaria['preco'] for var_temporaria in produtos]
+# print(novos_precos)
 
-print(novos_precos)
+# def aumenta_10porcento(lista_de_numeros):
+#     numeros_aumentados = []
+#     for num in lista_de_numeros:
+#         numeros_aumentados.append(num * 1.10)
+#     return numeros_aumentados
+
+# print(aumenta_10porcento(novos_precos))
+
+
+
