@@ -33,5 +33,8 @@ produtos = [
 
 # print(aumenta_10porcento(novos_precos))
 
+for i in produtos:
+    print(i)
+
 
 
