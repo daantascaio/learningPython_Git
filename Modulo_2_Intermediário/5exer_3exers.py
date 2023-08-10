@@ -110,7 +110,7 @@ os.system('cls')
    Gere produtos_ordenados_por_nome por deep copy (cópia profunda)
 """
 
-print('LISTA DEEPCOPY')
+print('\n \n \n \n \n \nLISTA DEEPCOPY')
 product_list_sorted_byName = copy.deepcopy(produtos)
 for y in product_list_sorted_byName:
     name = y['nome']
@@ -124,8 +124,7 @@ for y in product_list_sorted_byName:
     price = y['preco']
     print(f"Nome: {name} Preço: {price}")
 
-
-s = input('\nPressione a tecla [Enter] para continuar! ')
+j = input('\nPressione a tecla [Enter] para continuar! ')
 os.system('cls')
 
 
@@ -133,4 +132,32 @@ os.system('cls')
 3) Ordene os produtos por preco crescente (do menor para maior)
    Gere produtos_ordenados_por_preco por deep copy (cópia profunda)
 """
+# product_list_reverseOrdened_byPrice = copy.deepcopy(produtos)
+# product_list_reverseOrdened_byPrice = sorted(produtos, key=lambda item: item['preco'])
+
+# print('LISTA PRODUCT ORDENED BY PRICE')
+# for y in product_list_reverseOrdened_byPrice:
+#    name = y['nome']
+#    price = y['preco']
+#    print(f"Nome: {name} Preço: {price}")
+
+# print('\nORIGINAL LIST')
+# for y in produtos:
+#    name = y['nome']
+#    price = y['preco']
+#    print(f"Nome: {name} Preço: {price}")
+
+product_list_reverseOrdened_byPrice = copy.deepcopy(produtos)
+product_list_reverseOrdened_byPrice = sorted(produtos, key=lambda item: item['preco'])
+
+print('LISTA PRODUCT ORDENED BY PRICE      ORIGINAL LIST')
+for product, original_product in zip(product_list_reverseOrdened_byPrice, produtos):
+    name = product['nome']
+    price = product['preco']
+    
+    original_name = original_product['nome']
+    original_price = original_product['preco']
+    
+    print(f"Nome: {name} Preço: {price:<10} | Nome: {original_name} Preço: {original_price}")
+
 
