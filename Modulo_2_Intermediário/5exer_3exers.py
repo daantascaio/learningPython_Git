@@ -114,8 +114,21 @@ produtos = [
    Gere produtos_ordenados_por_nome por deep copy (cópia profunda)
 """
 
+print('LISTA DEEPCOPY')
+product_list_sorted_byName = copy.deepcopy(produtos)
+for y in product_list_sorted_byName:
+    name = y['nome']
+    price = y['preco']
+    print(f"Nome: {name} Preço: {price}")
 
-print(produtos.sort)
+print('\nLISTA DEEPCOPY SORTED BY NAME')
+product_list_sorted_byName = sorted(produtos, key=lambda item: item['nome'], reverse=True)
+for y in product_list_sorted_byName:
+    name = y['nome']
+    price = y['preco']
+    print(f"Nome: {name} Preço: {price}")
+
+
 
 
 
