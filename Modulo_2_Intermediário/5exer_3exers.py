@@ -33,8 +33,29 @@ produtos = [
 
 # print(aumenta_10porcento(novos_precos))
 
-for i in produtos:
-    print(i)
+# for i in produtos:
+#     preco_alterado = i['preco']
+#     print(preco_alterado)
+
+def values_second_index_dictionaries(product_list):
+    for dictionary in product_list:
+        yield dictionary['preco']
+
+def increase_10_percent(numbers):
+    result = []
+    for num in numbers:
+        num = num * 1.1
+        num = "{:.2f}".format(num)
+        result.append(float(num))
+    yield list(result)
+
+values_without_increase = list(values_second_index_dictionaries(produtos))
+print(f'VALOR ORIGINAL: {values_without_increase}')
+
+values_whith_increase = increase_10_percent(values_without_increase)
+print(f'VALUE WITH INCREASE 10%: {values_whith_increase}')
+
+
 
 
 
