@@ -69,15 +69,6 @@ print(f'VALUE WITH INCREASE 10%: {values_whith_increase}')
 
 
 
-
-
-
-
-
-
-
-
-
 """
 2) Ordene os produtos por nome decrescente (do maior para menor)
    Gere produtos_ordenados_por_nome por deep copy (cópia profunda)
