@@ -17,7 +17,8 @@ def function_zipper(small_list, big_list):
 
     cont = []
     for i in zip(small_list, big_list):
-        cont += i
+        i = tuple(i)
+        cont.append(i)
     return print(cont)
 
-function_zipper(cities, abbreviated_states)
+function_zipper (cities, abbreviated_states)
