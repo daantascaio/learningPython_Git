@@ -15,10 +15,12 @@ abbreviated_states = ['BA', 'SP', 'MG', 'RJ']
 
 def function_zipper(small_list, big_list):
 
-    cont = []
-    for i in zip(small_list, big_list):
-        i = tuple(i)
-        cont.append(i)
-    return print(cont)
+    # cont = []
+    # for i in zip(small_list, big_list):
+    #     i = tuple(i)
+    #     cont.append(i)
+    # return print(cont)
+    
+    return print(list(zip(cities, abbreviated_states)))
 
-function_zipper (cities, abbreviated_states)
+function_zipper(cities, abbreviated_states)
