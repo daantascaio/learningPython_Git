@@ -11,3 +11,5 @@
 # pip uninstall nome_pacote
 # Congelar (ver pacotes)
 # pip freeze
+#
+# When i go to uninstall some package, it asks for confirmation. To avoid having to answer this confirmation every time, just write pip uninstalling name_package -y
