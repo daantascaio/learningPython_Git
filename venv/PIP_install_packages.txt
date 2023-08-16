@@ -13,3 +13,9 @@
 # pip freeze
 #
 # When i go to uninstall some package, it asks for confirmation. To avoid having to answer this confirmation every time, just write pip uninstalling name_package -y
+#
+#
+# Criando e usando um requirements.txt
+# pip freeze > requirements.txt
+# Instalando tudo do requirements.txt
+# pip install -r requirements.txt
