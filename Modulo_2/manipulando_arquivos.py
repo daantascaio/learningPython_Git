@@ -1,3 +1,5 @@
+import os
+
 """ 
  Criando arquivos com Python + Context Manager with
  Usamos a função open para abrir um arquivo em Python (ele pode ou não existir)
@@ -20,6 +22,9 @@
  Vamos falar mais sobre o módulo json, mas:
  json.dump = Gera um arquivo json
  json.load
+
+ Unicode
+ use encoding='utf8' para não ter dor de cabeça com acentos e caractares especiais
 """
 
 caminho_arquivo = 'C:\\Users\\caio.dantas\\Desktop\\learningPython_Git\\'
@@ -67,3 +72,10 @@ with open(caminho_arquivo, 'a+', encoding='utf8') as arquivo:
     arquivo.writelines(
         ('Linha 3\n', 'Linha 4\n')
     )
+
+
+# Executando esses códigos, vc apaga o arquivo, os dois fazem a mesma cosia! Eu não executei, por isso o arquivo continua criados
+# os.unlink(caminho_arquivo) 
+# os.remove(caminho_arquivo)
+
+os.rename('C:\\Users\\caio.dantas\\Desktop\\learningPython_Git\\manipulando_arqs.txt', 'C:\\Users\\caio.dantas\\Desktop\\learningPython_Git\\Modulo_2\\manipulando_arqs.txt')
