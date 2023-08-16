@@ -30,6 +30,31 @@ caminho_arquivo += 'manipulando_arqs.txt'
 # # é extremamente importante sempre fechar o arquivo!
 # arquivo.close()
 
-with open(caminho_arquivo, 'w') as arquivo:
-    print('Olá mundo')
-    print('Arquivo vai ser fechado!')
+with open(caminho_arquivo, 'w+') as arquivo:
+    arquivo.write('Linha 1\n')
+    arquivo.write('Linha 2\n')
+    arquivo.writelines(
+        ('Linha 3\n', 'Linha 4\n')
+    )
+    print(arquivo.read()) # Observe que como o meu cursor do python parou depois que eu pulei a linha no 'Linha 4\n', eu li um arquivo em "branco"
+
+    arquivo.seek(0, 0)
+    print(arquivo.read()) # Aqui eu já movimentei meu cursor para o início do arquivo e depois li ele
+
+    print('\nREADLINES MANEIRA INEFICIENTE')
+    arquivo.seek(0, 0)
+    print(arquivo.readline(), end='')
+    print(arquivo.readline().strip())
+    print(arquivo.readline().strip())
+    print(arquivo.readline().strip())
+
+    ########################################
+    ########################################
+    
+    print('\nREADLINES MANEIRA EFICIENTE')
+    arquivo.seek(0, 0)
+    for linha in arquivo.readlines():
+        print(linha.strip())
+
+# with open(caminho_arquivo, 'r') as arquivo:
+#     print(arquivo.read())
