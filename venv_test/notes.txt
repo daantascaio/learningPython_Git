@@ -30,3 +30,5 @@
 # pip freeze > requirements.txt
 # Instalando tudo do requirements.txt
 # pip install -r requirements.txt
+# Se eu instalar um novo pacote na venv, preciso atualizar o meu requirements.txt
+# pip freeze > requirements.txt
