@@ -118,3 +118,9 @@ while True:
     #     adicionar(tarefa, tarefas)
     #     listar(tarefas)
     #     continue
+
+    '''
+    
+        ALGUNS ARQUIVOS VÃO GERAR ERRO, O PATH DELES FOI ALTERADO, CUIDADO!
+
+    '''
