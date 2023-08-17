@@ -15,7 +15,7 @@ class People:
     def __init__(self, firstName, secondName):
         self.firstName = firstName
         self.secondName = secondName
-        pass
+        
 
 
 people_one = People('Caio', 'Dantas')
