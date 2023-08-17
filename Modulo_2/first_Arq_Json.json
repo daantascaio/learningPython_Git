@@ -1,5 +1,5 @@
 {
-  "nome": "Luiz Otávio 2",
+  "nome": "Luiz Ot\u00e1vio 2",
   "sobrenome": "Miranda",
   "enderecos": [
     {
@@ -19,6 +19,6 @@
     8,
     10
   ],
-   "dev": True,
-   "nada": Null
+  "dev": true,
+  "nada": null
 }
