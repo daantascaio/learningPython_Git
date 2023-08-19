@@ -1,6 +1,12 @@
 # Métodos em instâncias de classes Python
 # Hard coded - É algo que foi escrito diretamente no código
 
+
+# Entendendo self em classes Python
+# Classe - Molde (geralmente sem dados)
+# Instância da class (objeto) - Tem os dados
+# Uma classe pode gerar várias instâncias.
+# Na classe o self é a própria instância.
 class Car:
     def __init__(self, name, brand):
         self.name = name
