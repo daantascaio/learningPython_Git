@@ -21,12 +21,24 @@ class People:
 # data_people_one = people_one.__dict__ # storing my instance data
 
 # -- # -- #
-with open('Modulo_3_introPOO\\1exer_people_one.json', 'w', encoding='utf8') as arqs:
-    json.dump(
-        data_people_one,
-        arqs,
-        indent=2,
-    )
+# with open('Modulo_3_introPOO\\1exer_people_one.json', 'w', encoding='utf8') as json.file:
+#     json.dump(
+#         data_people_one,
+#         json.file,
+#         indent=2,
+#     )
+# -- # -- #
+
+# -- # -- #
+with open('Modulo_3_introPOO\\1exer_people_one.json', 'r', encoding='utf8') as json.file:
+    people_one = json.load(json.file)
+
+people_one = People(**people_one)
+print(vars(people_one))
+print(people_one.name)
+print(people_one.age)
+print(people_one.height)
+print(people_one.job)
 
 
 
