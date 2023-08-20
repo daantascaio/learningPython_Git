@@ -16,11 +16,9 @@ class People:
         self.height = height
         self.job = job
 
-people_one = People('Caio', 20, 1.83, 'DevOps')
-print(vars(people_one))
+# people_one = People('Caio', 20, 1.83, 'DevOps') # setting my instance data
 
-data_people_one = people_one.__dict__
-print(data_people_one)
+# data_people_one = people_one.__dict__ # storing my instance data
 
 # -- # -- #
 with open('Modulo_3_introPOO\\1exer_people_one.json', 'w', encoding='utf8') as arqs:
