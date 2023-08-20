@@ -21,7 +21,7 @@ class People:
 # data_people_one = people_one.__dict__ # storing my instance data
 
 # -- # -- #
-# with open('Modulo_3_introPOO\\1exer_people_one.json', 'w', encoding='utf8') as json.file:
+# with open('Modulo_3_introPOO\\exercicios\\1exer_people_one.json', 'w', encoding='utf8') as json.file:
 #     json.dump(
 #         data_people_one,
 #         json.file,
@@ -30,7 +30,7 @@ class People:
 # -- # -- #
 
 # -- # -- #
-with open('Modulo_3_introPOO\\1exer_people_one.json', 'r', encoding='utf8') as json.file:
+with open('Modulo_3_introPOO\\exercicios\\1exer_people_one.json', 'r', encoding='utf8') as json.file:
     people_one = json.load(json.file)
 
 people_one = People(**people_one)
