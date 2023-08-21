@@ -8,9 +8,22 @@ class Pessoa:
         self.nome = nome
         self.idade = idade
 
-    def metodo_de_classe(self):
+    @classmethod
+    def metodo_de_classe(cls):
         print('Hey')
 
+    @classmethod
+    def criar_com_50_anos(cls, nome):
+        return cls(nome, 50)
+
+    @classmethod
+    def criar_sem_nome(cls, nome):
+        return cls('Anônima', 50)
+
 p1 = Pessoa('João', 34)
-print(Pessoa.ano)
-Pessoa.metodo_de_classe()
+p2 = Pessoa.criar_com_50_anos('Helena')
+p3 = Pessoa.criar_sem_nome(23)
+print(p2.nome, p2.idade)
+print(p3.nome, p3.idade)
+# print(Pessoa.ano)
+# Pessoa.metodo_de_classe()
