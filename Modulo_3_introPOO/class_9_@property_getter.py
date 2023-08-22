@@ -14,20 +14,58 @@
 
 # Código cliente - é o código que usa seu código
 
+
+
+
+"""
+    AGORA É O MODO PYTHÔNICO
+"""
+
 class Caneta:
-    
-    def __init__(self, cor):
-        #private #protected #public ----> protegendo meus atributos
+
+    def __init__(self, cor, tampa_cor):
         self.cor_tinta = cor
+        self.tampa_cor = tampa_cor
 
-    def get_cor(self):
-        print('GET COR')
+    @property
+    def cor(self):
+        print(2 + 5)
         return self.cor_tinta
+    
+    @property
+    def tampa(self):    
+        return self.tampa_cor
+
+caneta = Caneta('Azul', 'Vermelha')
+print(caneta.cor)
+print(caneta.cor)
+print(caneta.cor)
+print(caneta.cor)
+print(caneta.cor)
+print()
+print(caneta.tampa)
+print(caneta.tampa)
+print(caneta.tampa)
+print(caneta.tampa)
 
 
-caneta = Caneta('Azul')
-print(caneta.get_cor())
-print(caneta.get_cor())
-print(caneta.get_cor())
-print(caneta.get_cor())
-print(caneta.get_cor())
+###################################################################
+
+
+# class Caneta:
+    
+#     def __init__(self, cor):
+#         #private #protected #public ----> protegendo meus atributos
+#         self.cor_tinta = cor
+
+#     def get_cor(self):
+#         print('GET COR')
+#         return self.cor_tinta
+
+
+# caneta = Caneta('Azul')
+# print(caneta.get_cor())
+# print(caneta.get_cor())
+# print(caneta.get_cor())
+# print(caneta.get_cor())
+# print(caneta.get_cor())
