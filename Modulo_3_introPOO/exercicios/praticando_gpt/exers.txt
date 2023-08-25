@@ -30,3 +30,4 @@ Exercício 7: Composição
 Crie uma classe chamada Autor com atributos para nome, idade e nacionalidade. 
 Em seguida, crie uma classe chamada Livro, com atributos para título, ano de publicação e um autor associado. 
 Utilize a composição para relacionar um autor a um livro.
+
