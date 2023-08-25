@@ -4,8 +4,7 @@
 # - p/ habilitar setter
 # - p/ executar ações ao obter um atributo
 
-# Atributos que começar com um ou dois underlines ( _, __ )
-# não devem ser usados fora da classe.
+# Atributos que começar com um ou dois underlines ( _, __ ) não devem ser usados fora da classe.
 #  🐍🤓🤯🤯🤯🤯
 
 class Caneta:
