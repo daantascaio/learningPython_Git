@@ -43,3 +43,7 @@ with path_arquivo.open('a') as file:
 print(path_arquivo.read_text())
 
 
+PATH_FILE = Path(__file__).parent / 'pathlib_2.py'
+PATH_FILE.touch()
+
+
