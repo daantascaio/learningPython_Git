@@ -22,7 +22,24 @@ print(f'8 {criar_caminho}')
 print()
 print()
 
-print(f'9 {Path.home()}')
-print(f"10 {Path.home() / 'Desktop'}")
+# arquivo = Path(__file__).parent / 'arquivo.txt'
+# print(f'9 {Path.home()}')
+# print(f"10 {Path.home() / 'Desktop'}")
+
+# arquivo.touch() # Quando executado, será criado o meu 'arquivo.txt'
+
+# arquivo.write_text('Hello World')
+# print(arquivo.read_text())
+
+# arquivo.unlink() # Apaga o meu 'arquivo.txt'
+
+path_arquivo = Path.home() / 'Desktop' / 'arquivo.txt'
+path_arquivo.touch()
+
+with path_arquivo.open('a') as file:
+    file.write('Uma linha\n')
+    file.write('Outra linha\n')
+
+print(path_arquivo.read_text())
 
 
