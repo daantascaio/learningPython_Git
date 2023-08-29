@@ -11,11 +11,16 @@
 class MeuError(Exception):
     ...  
 
+
 class OutroError(Exception):
     ...
 
+
+
 def levantar():
     exception_ = MeuError('A', 'B', 'C')
+    exception_.add_note('Olha a nota 1')
+    exception_.add_note('Olha a nota 2')
     raise exception_
 
 try:
@@ -25,4 +30,6 @@ except (MeuError, ZeroDivisionError) as error:
     print(error.args)
     print()
     exception_ = OutroError('Vou lançar de novo')
+    exception_.add_note('Olá')
+    exception_.__notes__ += error.__notes__.copy()
     raise exception_ from error
