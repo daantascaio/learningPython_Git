@@ -26,6 +26,7 @@ def meu_repr(self):
     return f'{type(self).__name__}({self.__dict__})'
 
 
+
 class Meta(type):
     def __new__(mcs, name, bases, dct):
         print('METACLASS NEW')
@@ -35,7 +36,6 @@ class Meta(type):
 
         if 'falar' not in cls.__dict__ or not callable(cls.__dict__['falar']):
             raise NotImplementedError('Implemente falar')
-
         return cls
 
     def __call__(cls, *args, **kwargs):
@@ -45,6 +45,7 @@ class Meta(type):
             raise NotImplementedError('Crie o attr nome')
 
         return instancia
+
 
 
 class Pessoa(metaclass=Meta):
