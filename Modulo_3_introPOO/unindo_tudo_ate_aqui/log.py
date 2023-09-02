@@ -8,10 +8,10 @@ LOG_FILE = Path(__file__).parent / 'log.txt'
 
 
 class Log:
- 
+
     def _log(self, msg):
         raise NotImplementedError('Implemente o método log')
-  
+
     def log_error(self, msg):
         self._log(f'Error: {msg}')
 
@@ -20,7 +20,7 @@ class Log:
 
 
 class LogFileMixin(Log):
-    
+
     def _log(self, msg):
         msg_formatada = f'{msg} ({self.__class__.__name__})'
         print('Salvando no log: ', msg_formatada)
@@ -28,12 +28,12 @@ class LogFileMixin(Log):
             file.write(msg_formatada)
             file.write('\n')
 
+
 class LogPrintMixin(Log):
 
     def _log(self, msg):
         print(f'{msg} ({self.__class__.__name__})')
-    
 
-if __name__ == '__main__':    
+
+if __name__ == '__main__':
     print(LOG_FILE)
-
