@@ -12,7 +12,12 @@
 
 #####
 
-import docStrings_functions
+# import docStrings_functions
 
-help(docStrings_functions)
+# help(docStrings_functions)
 
+#####
+
+import docStrings_class
+
+help(docStrings_class)
