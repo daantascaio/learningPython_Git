@@ -6,6 +6,13 @@
 # print(docString_umaLinha.__name__)
 # help(docString_umaLinha)
 
-import docString_variasLinhas
+# import docString_variasLinhas
 
-help(docString_variasLinhas)
+# help(docString_variasLinhas)
+
+#####
+
+import docStrings_functions
+
+help(docStrings_functions)
+
