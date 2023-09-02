@@ -15,11 +15,11 @@ class Carro:
         self._fabricante = None
 
     @property
-    def motor(self):
+    def get_motor(self):
         return self._motor
 
-    @motor.setter
-    def motor(self, valor):
+    @get_motor.setter
+    def get_motor(self, valor):
         self._motor = valor
 
     @property
@@ -45,24 +45,24 @@ fusca = Carro('Fusca')
 volkswagen = Fabricante('Volkswagen')
 motor_1_0 = Motor('1.0')
 fusca.fabricante = volkswagen
-fusca.motor = motor_1_0
-print(fusca.nome, fusca.fabricante.nome, fusca.motor.nome)
+fusca.get_motor = motor_1_0
+print(fusca.nome, fusca.fabricante.nome, fusca.get_motor.nome)
 
 gol = Carro('Gol')
 gol.fabricante = volkswagen
-gol.motor = motor_1_0
-print(gol.nome, gol.fabricante.nome, gol.motor.nome)
+gol.get_motor = motor_1_0
+print(gol.nome, gol.fabricante.nome, gol.get_motor.nome)
 
 fiat_uno = Carro('Uno')
 fiat = Fabricante('Fiat')
 fiat_uno.fabricante = fiat
-fiat_uno.motor = motor_1_0
-print(fiat_uno.nome, fiat_uno.fabricante.nome, fiat_uno.motor.nome)
+fiat_uno.get_motor = motor_1_0
+print(fiat_uno.nome, fiat_uno.fabricante.nome, fiat_uno.get_motor.nome)
 
 focus = Carro('Focus Titanium')
 ford = Fabricante('Ford')
 motor_2_0 = Motor('2.0')
 focus.fabricante = ford
-focus.motor = motor_2_0
-print(focus.nome, focus.fabricante.nome, focus.motor.nome)
+focus.get_motor = motor_2_0
+print(focus.nome, focus.fabricante.nome, focus.get_motor.nome)
 
