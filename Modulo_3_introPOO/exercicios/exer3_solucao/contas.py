@@ -18,7 +18,10 @@ class Conta(abc.ABC):
 
 
 class ContaPoupanca(Conta):
-    ...
+    def sacar(self, valor):
+        valor_pos_saque = self.saldo - valor
+
+        
 
 
     
