@@ -34,7 +34,22 @@ Banco autentica por um método.
 from abc import ABC, ABCMeta, abstractclassmethod, abstractmethod
 
 class Conta(ABC):
+    def __init__(self, agencia, numero_conta, saldo = 0):
+        self._agencia = agencia
+        self._numero_conta = numero_conta
+        self.saldo = saldo
+
+    def depositar(self, valor):
+        self.saldo += valor
+
+
+class ContaCorrente(Conta):
     ...
+
+
+class ContaPoupanca(Conta):
+    ...   
+
 
 class Pessoa(ABC):
     def __init__(self, nome, idade):
@@ -63,8 +78,9 @@ class Banco(ABC):
 
 
 class Cliente(Pessoa):
-    def __init__(self, nome, idade):
+    def __init__(self, nome, idade, conta):
         super().__init__(nome, idade)
+        self.conta = conta
 
     @Pessoa.get_nome.setter
     def get_nome(self, nome):
@@ -75,10 +91,13 @@ class Cliente(Pessoa):
         self._idade = idade
 
 
-c1 = Cliente('Caio Dantas', 30)
-print(c1.get_idade)
-print(c1.get_nome)
+# cliente_id1= Cliente('Caio Dantas', 30)
+# print(c1.get_idade)
+# print(c1.get_nome)
 
+t = Conta(123, 12345)
+t.depositar(100)
+print(t._saldo)
 
 
 
