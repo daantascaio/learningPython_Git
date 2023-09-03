@@ -8,11 +8,14 @@
 
 from dataclasses import dataclass
 
+# @dataclass(frozen=True, repr=False)
+# @dataclass(order=True)
+# @dataclass()
 @dataclass
 class Pessoa:
     nome: str
     sobrenome: str
-
+  
     def __post_init__(self):
         print('POST INIT')
 
