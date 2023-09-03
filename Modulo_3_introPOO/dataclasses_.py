@@ -13,6 +13,9 @@ class Pessoa:
     nome: str
     sobrenome: str
 
+    def __post_init__(self):
+        print('POST INIT')
+
     @property
     def nome_completo(self):
         return f'{self.nome} {self.sobrenome }'
